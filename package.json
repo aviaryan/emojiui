@@ -1,0 +1,28 @@
+{
+  "name": "emojiui",
+  "version": "0.1.0",
+  "description": "Emoji GUI in Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aviaryan/emojiui.git"
+  },
+  "devDependencies": {
+    "standard": "^3.0.0"
+  },
+  "keywords": [
+    "emoji",
+    "gui",
+    "electron",
+    "offline"
+  ],
+  "author": "Avi Aryan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aviaryan/emojiui/issues"
+  },
+  "homepage": "https://github.com/aviaryan/emojiui#readme"
+}
