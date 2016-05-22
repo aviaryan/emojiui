@@ -15,7 +15,7 @@
     "url": "git+https://github.com/aviaryan/emojiui.git"
   },
   "dependencies": {
-    "node-static": "^0.7.7"
+    "node-static": ">=0.7.7"
   },
   "devDependencies": {
     "electron-prebuilt": "^1.1.1",

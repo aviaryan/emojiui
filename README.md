@@ -6,13 +6,13 @@ Simple Offline Emoji finding tool using Electron
 
 ### Install and Run
 
-```
+```sh
 npm install emojiui -g
 emojiui
 ```
 or
 
-```bash
+```sh
 git clone --recursive https://github.com/aviaryan/emojiui.git
 sudo npm install -g
 emojiui
