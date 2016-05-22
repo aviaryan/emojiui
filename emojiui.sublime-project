@@ -1,8 +1,21 @@
 {
-	"folders":
-	[
-		{
-			"path": "."
-		}
-	]
+  "build_systems":
+  [
+    {
+      "name": "Run",
+      "cmd": ["npm", "start"],
+      "working_dir": "${project_path}"
+    },
+    {
+      "name": "Test",
+      "cmd": ["npm", "test"],
+      "working_dir": "${project_path}"
+    }
+  ],
+  "folders":
+  [
+    {
+      "path": "."
+    }
+  ]
 }
