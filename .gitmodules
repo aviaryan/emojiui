@@ -1,0 +1,3 @@
+[submodule "emoji"]
+	path = emoji
+	url = https://github.com/muan/emoji

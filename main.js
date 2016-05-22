@@ -14,7 +14,7 @@ let mainWindow
  */
 function serve () {
   var nodeStatic = require('node-static')
-  var file = new nodeStatic.Server('.')
+  var file = new nodeStatic.Server('./emoji')
 
   require('http').createServer(function (request, response) {
     request.addListener('end', function () {
@@ -33,7 +33,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:8237/main.js')
+  mainWindow.loadURL('http://localhost:8237')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
