@@ -1,13 +1,13 @@
 {
   "name": "emojiui",
-  "version": "0.1.3",
+  "version": "0.2.5",
   "description": "Emoji GUI in Electron",
   "main": "main.js",
   "bin": {
     "emojiui": "./main.js"
   },
   "scripts": {
-    "test": "standard",
+    "test": "standard main.js",
     "start": "electron main.js"
   },
   "repository": {

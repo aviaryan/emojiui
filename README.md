@@ -4,10 +4,20 @@
 
 Simple Offline Emoji finding tool using Electron
 
-## Install and Run
+### Install and Run
 
 ```
-git clone --recursive https://github.com/aviaryan/emojiui.git
-npm install
-npm start
+npm install emojiui -g
+emojiui
 ```
+or
+
+```bash
+git clone --recursive https://github.com/aviaryan/emojiui.git
+sudo npm install -g
+emojiui
+```
+
+### License
+
+MIT
