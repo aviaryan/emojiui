@@ -4,13 +4,15 @@
   "description": "Emoji GUI in Electron",
   "main": "main.js",
   "scripts": {
-    "test": "standard"
+    "test": "standard",
+    "start": "electron main.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aviaryan/emojiui.git"
   },
   "devDependencies": {
+    "electron-prebuilt": "^1.1.1",
     "standard": "^3.0.0"
   },
   "keywords": [
