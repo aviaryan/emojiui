@@ -5,6 +5,8 @@ const electron = require('electron')
 const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
+// Module for registering keyboard shortcuts
+const globalShortcut = electron.globalShortcut
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -55,7 +57,13 @@ serve()
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+app.on('ready', () => {
+  createWindow()
+  // Escape to exit
+  globalShortcut.register('Escape', () => {
+    app.quit()
+  })
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
