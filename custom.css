@@ -6,10 +6,9 @@ header {
   position: fixed !important;
   padding-top: 10px !important;
   background-color: white !important;
-  /*margin-bottom: 40px !important;*/
   z-index: 1 !important;
 }
 
 section {
-  padding-top: 50px !important;
+  padding-top: 60px !important;
 }

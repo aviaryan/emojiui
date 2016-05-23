@@ -1,5 +1,6 @@
 #!/usr/bin/env electron
 
+// load electron
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
@@ -8,11 +9,14 @@ const BrowserWindow = electron.BrowserWindow
 // Module for registering keyboard shortcuts
 const globalShortcut = electron.globalShortcut
 
-const fs = require('fs')
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow, webContents
+// Read custom css to string
+let customCSS
+require('fs').readFile('custom.css', 'utf8', function (err, contents) {
+  customCSS = contents
+})
 
 /**
  * Serves the emoji web app
@@ -35,9 +39,7 @@ function serve () {
  * @return {void}
  */
 function injectCustomCSS () {
-  fs.readFile('custom.css', 'utf8', function (err, contents) {
-    webContents.insertCSS(contents)
-  })
+  webContents.insertCSS(customCSS)
 }
 
 /**
@@ -60,9 +62,6 @@ function createWindow () {
   webContents.on('did-finish-load', injectCustomCSS)
   webContents.on('did-navigate-in-page', injectCustomCSS)
 }
-
-// start the web app
-serve()
 
 // Electron is initialized
 app.on('ready', () => {
@@ -96,3 +95,6 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+// start the emoji server
+serve()
