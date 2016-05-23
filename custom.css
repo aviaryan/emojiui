@@ -1,0 +1,15 @@
+body {
+  padding-top: 0 !important;
+}
+
+header {
+  position: fixed !important;
+  padding-top: 10px !important;
+  background-color: white !important;
+  /*margin-bottom: 40px !important;*/
+  z-index: 1 !important;
+}
+
+section {
+  padding-top: 50px !important;
+}

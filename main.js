@@ -8,9 +8,11 @@ const BrowserWindow = electron.BrowserWindow
 // Module for registering keyboard shortcuts
 const globalShortcut = electron.globalShortcut
 
+const fs = require('fs')
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow, webContents
 
 /**
  * Serves the emoji web app
@@ -29,6 +31,16 @@ function serve () {
 }
 
 /**
+ * Inject the custom CSS to window
+ * @return {void}
+ */
+function injectCustomCSS () {
+  fs.readFile('custom.css', 'utf8', function (err, contents) {
+    webContents.insertCSS(contents)
+  })
+}
+
+/**
  * Creates the Electron window
  * @return {void}
  */
@@ -42,6 +54,11 @@ function createWindow () {
     // Single page app, no need to keep window instance
     mainWindow = null
   })
+
+  webContents = mainWindow.webContents
+  // Inject css
+  webContents.on('did-finish-load', injectCustomCSS)
+  webContents.on('did-navigate-in-page', injectCustomCSS)
 }
 
 // start the web app
