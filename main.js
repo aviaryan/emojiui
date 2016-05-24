@@ -15,6 +15,9 @@ let mainWindow, webContents
 // Read custom css to string
 let customCSS
 require('fs').readFile('custom.css', 'utf8', function (err, contents) {
+  if (err) {
+    return console.error(err)
+  }
   customCSS = contents
 })
 
