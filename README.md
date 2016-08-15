@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
-Simple Offline Emoji finding tool using Electron
+Simple Offline Emoji finding tool using Electron. Uses @muan's [emoji](https://github.com/muan/emoji) under the hood. 
 
 
 ### Screenshots
