@@ -4,6 +4,14 @@
 
 Simple Offline Emoji finding tool using Electron
 
+
+### Screenshots
+
+![emojiui](https://cloud.githubusercontent.com/assets/4047597/17655383/5ad6528e-62cb-11e6-839c-1449201d2cd0.jpg)
+
+![smile_emojiui](https://cloud.githubusercontent.com/assets/4047597/17655384/5b1abbe0-62cb-11e6-9778-a18dbd15915a.jpg)
+
+
 ### Install and Run
 
 ```sh
