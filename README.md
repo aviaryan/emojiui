@@ -1,6 +1,7 @@
 # EmojiUI
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![npm](https://img.shields.io/npm/v/emojiui.svg)](https://www.npmjs.com/package/emojiui)
 
 Simple Offline Emoji finding tool using Electron. Uses @muan's [emoji](https://github.com/muan/emoji) under the hood. 
 
