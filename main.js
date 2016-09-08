@@ -21,11 +21,12 @@ require('fs').readFile('custom.css', 'utf8', function (err, contents) {
   customCSS = contents
 })
 
-/** 
- * Runs in an available port 
- * https://gist.github.com/mikeal/1840641
- */
 
+/**
+ * Runs in an available port
+ * https://gist.github.com/mikeal/1840641
+ * @return {void}
+ */
 var portrange = 45032
 
 function getPort (cb) {
@@ -76,7 +77,7 @@ function injectCustomCSS () {
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
-  mainWindow.loadURL('http://localhost:8237')
+  mainWindow.loadURL('http://localhost:' + (portrange-1))
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -124,6 +125,5 @@ app.on('activate', function () {
 })
 
 // start the emoji server
-// serve()
 getPort(serve)
 
