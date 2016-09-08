@@ -21,11 +21,32 @@ require('fs').readFile('custom.css', 'utf8', function (err, contents) {
   customCSS = contents
 })
 
+/** Runs in an available port
+**/
+var portrange = 45032
+
+function getPort (cb) {
+  var port = portrange
+  portrange += 1
+
+  var server = require('net').createServer()
+  server.listen(port, function (err) {
+    server.once('close', function () {
+      cb(port)
+    })
+    server.close()
+  })
+  server.on('error', function (err) {
+    getPort(cb)
+  })
+}
+
+
 /**
  * Serves the emoji web app
  * @return {void}
  */
-function serve () {
+function serve (port) {
   var nodeStatic = require('node-static')
   var file = new nodeStatic.Server('./emoji')
 
@@ -34,7 +55,7 @@ function serve () {
       // Serve the files
       file.serve(request, response)
     }).resume()
-  }).listen(8237)
+  }).listen(port)
 }
 
 /**
@@ -100,4 +121,6 @@ app.on('activate', function () {
 })
 
 // start the emoji server
-serve()
+// serve()
+getPort(serve)
+
