@@ -21,8 +21,11 @@ require('fs').readFile('custom.css', 'utf8', function (err, contents) {
   customCSS = contents
 })
 
-/** Runs in an available port
-**/
+/** 
+ * Runs in an available port 
+ * https://gist.github.com/mikeal/1840641
+ */
+
 var portrange = 45032
 
 function getPort (cb) {
