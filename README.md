@@ -19,7 +19,7 @@ Simple Offline Emoji finding tool using Electron. Uses @muan's [emoji](https://g
 $ sudo npm install emojiui -g
 $ emojiui
 # may need to install electron
-# sudo npm install electron-prebuilt -g
+# sudo npm install electron -g
 ```
 or
 
